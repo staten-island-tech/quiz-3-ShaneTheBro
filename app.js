@@ -1,4 +1,4 @@
-function tipCalc(bill) {
+/* function tipCalc(bill) {
   let percentage;
   if (bill < 50) {
     percentage = 0.2;
@@ -24,4 +24,33 @@ function bigEnough(totals){
 }
 
 const copy = totals.filter(bigEnough);
-console.log(`The totals over $100 are ${copy}`);
+console.log(`The totals over $100 are ${copy}`); */
+
+const rob = {
+  fullName: 'Robert Grande',
+  mass: 78,
+  height: 1.69,
+  getBMI: function(){
+    return this.mass / (this.height * this.height);
+  }
+}
+
+const dejon = {
+  fullName: 'Dejon Kurti',
+  mass: 110,
+  height: 1.95,
+  getBMI: function(){
+    return this.mass / (this.height * this.height);
+  }
+}
+
+console.log(dejon.getBMI());
+console.log(rob.getBMI());
+
+if (dejon.getBMI() > rob.getBMI()){
+  console.log(`${dejon.fullName} has a higher BMI than ${rob.fullName}!`);
+} else if (rob.getBMI() > dejon.getBMI()){
+  console.log(`${rob.fullName} has a higher BMI than ${dejon.fullName}!`);
+} else {
+  console.log(`It's a tie!`);
+}
